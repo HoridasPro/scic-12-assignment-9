@@ -42,7 +42,10 @@ const slides = [
 
 const HeroSlider = () => {
   return (
-    <section className="relative w-full h-[80vh] md:h-[90vh]">
+    <section
+      id="hero"
+      className="relative w-full h-[80vh] md:h-[90vh] pt-[72px]"
+    >
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={0}
@@ -61,15 +64,15 @@ const HeroSlider = () => {
                 src={slide.img}
                 alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-cover z-0"
                 priority
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/0" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-black/0 z-10" />
 
               {/* Content */}
-              <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+              <div className="absolute inset-0 flex items-center justify-center text-center px-6 z-20">
                 <div className="text-white max-w-2xl animate-fadeUp">
                   <h2 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
                     {slide.title}
