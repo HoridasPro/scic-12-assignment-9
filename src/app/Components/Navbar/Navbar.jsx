@@ -1,5 +1,6 @@
 "use client";
 
+ 
 import Link from "next/link";
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
 
@@ -9,13 +10,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="text-3xl font-bold text-lime-400">
-          Frutin
+          FreshFruits
         </Link>
 
         {/* Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           <li>
-            <Link href="/">HOME +</Link>
+            <Link href="/home">HOME +</Link>
           </li>
           <li>
             <Link href="/about">ABOUT US</Link>
