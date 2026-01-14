@@ -30,12 +30,12 @@ const Services = () => {
         {/* Header Section */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-orange-500">🌼</span>
-            <span className="text-orange-400 font-medium italic">
+            <span className="text-green-500">🌼</span>
+            <span className="text-green-500 font-medium italic">
               Our Services
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a2e24]">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-600">
             Our Organic Farming Service <br /> For You!
           </h2>
         </div>

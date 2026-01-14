@@ -45,7 +45,7 @@ export default function WhyChooseUsPage() {
   }, []);
 
   return (
-    <main className="py-16 px-6 bg-[#F0FDF4] min-h-screen">
+    <main className="py-15 px-6 bg-[#F0FDF4]  ">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-12">
