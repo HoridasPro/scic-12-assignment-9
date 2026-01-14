@@ -1,6 +1,5 @@
-import BlogSection from "../Components/BlogSection/BlogSection";
+// import BlogSection from "../Components/BlogSection/BlogSection";
 import Categories from "../Components/Categories/Categories";
-import Footer from "../Components/Footer/Footer";
 import FruitsCards from "../Components/FruitsCards/FruitsCards";
 import HeroSlider from "../Components/HeroSlider/HeroSlider";
 import Services from "../Components/Services/Services";
@@ -14,8 +13,7 @@ export default function Home() {
       <Categories></Categories>
       <WhyChooseUs></WhyChooseUs>
       <Services></Services>
-      <BlogSection></BlogSection>
-      <Footer />
+      {/* <BlogSection></BlogSection> */}
     </>
   );
 }

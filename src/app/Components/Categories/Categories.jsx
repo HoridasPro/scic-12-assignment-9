@@ -68,36 +68,6 @@ const Categories = () => {
 
   return (
     <main className="min-h-screen font-sans">
-      {/* ================= SERVICES ================= */}
-      {/* <section className="bg-[#fdfcf4] py-20 px-4 text-center">
-        <h2 className="text-4xl font-extrabold text-[#1a2e24] mb-16">
-          Our Organic Farming Service For You!
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-          {services.map((s, i) => (
-            <div key={i} className="relative group">
-              <div className="h-64 rounded-3xl overflow-hidden shadow-lg">
-                <img
-                  src={s.img}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  alt=""
-                />
-              </div>
-              <div className="bg-white -mt-20 mx-auto w-[85%] rounded-[45px] pt-14 pb-8 px-6 shadow-xl">
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full flex items-center justify-center text-3xl shadow">
-                  {s.icon}
-                </div>
-                <h3 className="text-xl font-bold mt-6">{s.title}</h3>
-                <p className="text-gray-500 text-sm mt-3">
-                  Inspections to ensure compliance with organic standards.
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
       {/* ================= CATEGORIES ================= */}
       <section className="py-20  bg-white text-center">
         <h2 className="text-4xl font-bold mb-12 text-green-600">
@@ -108,9 +78,9 @@ const Categories = () => {
           {categories.map((c, i) => (
             <div
               key={i}
-              className="bg-[#f7f9f2] p-8 rounded-2xl w-44 hover:shadow-xl transition-all"
+              className="bg-[#f7f9f2] p-8 rounded-2xl w-58 hover:shadow-xl transition-all"
             >
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+              <div className="w-20 h-20 bg-white rounded-full hover:bg-orange-300 flex items-center justify-center mx-auto mb-4 text-3xl">
                 {c.icon}
               </div>
               <p className="text-xs text-black">Products ({c.count})</p>
