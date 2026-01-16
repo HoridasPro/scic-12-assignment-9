@@ -3,6 +3,7 @@ import Categories from "../Components/Categories/Categories";
 import FruitsCards from "../Components/FruitsCards/FruitsCards";
 import HeroSlider from "../Components/HeroSlider/HeroSlider";
 import Services from "../Components/Services/Services";
+import TeasteProduct from "../Components/TeasteProduct/TeasteProduct";
 import WhyChooseUs from "../Components/WhyChooseUs/WhyChooseUs";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Categories></Categories>
       <WhyChooseUs></WhyChooseUs>
       <Services></Services>
+      <TeasteProduct></TeasteProduct>
       {/* <BlogSection></BlogSection> */}
     </>
   );

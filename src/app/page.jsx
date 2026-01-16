@@ -5,6 +5,7 @@ import WhyChooseUs from "./Components/WhyChooseUs/WhyChooseUs";
 import Services from "./Components/Services/Services";
 // import BlogSection from "./Components/BlogSection/BlogSection";
 import Categories from "./Components/Categories/Categories";
+import TeasteProduct from "./Components/TeasteProduct/TeasteProduct";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Categories></Categories>
       <WhyChooseUs></WhyChooseUs>
       <Services></Services>
+      <TeasteProduct></TeasteProduct>
       {/* <BlogSection></BlogSection> */}
       
     </>
