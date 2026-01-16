@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
           <p className="text-yellow-400 text-xs uppercase tracking-widest mb-3">
             ✨ Why Choose Us
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-500">
             Savor The Purity, Taste The <br className="hidden md:block" />
             Difference!
           </h2>

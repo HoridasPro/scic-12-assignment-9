@@ -8,7 +8,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true); // Navbar visibility
   const [lastScroll, setLastScroll] = useState(0); // Track last scroll
   const [scrolled, setScrolled] = useState(false); // Shadow/bg after scroll
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu toggle
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu toggle
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,80 +60,23 @@ const Navbar = () => {
           <li>
             <Link href="/contactPage">CONTACT</Link>
           </li>
+          <li>
+            <button className="btn bg-green-500 px-4 py-2 rounded-lg">
+              <Link href="/login">LOGIN</Link>
+            </button>
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-4">
-          <button
+          {/* <button
             className="text-white text-xl"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <FiX /> : <FiMenu />}
-          </button>
-        </div>
-
-        {/* Right Actions */}
-        <div className="hidden md:flex items-center gap-5">
-          <button className="text-white text-xl">
-            <FiSearch />
-          </button>
-          <div className="relative text-white text-xl">
-            <FiShoppingCart />
-            <span className="absolute -top-2 -right-2 bg-black text-white text-xs px-1 rounded-full">
-              0
-            </span>
-          </div>
-          <Link
-            href="#items"
-            className="bg-lime-500 hover:bg-lime-600 text-black font-semibold px-6 py-2 rounded-full flex items-center gap-2 transition-transform hover:scale-105"
-          >
-            SHOP NOW <span>»</span>
-          </Link>
+          </button> */}
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-[#3f4d3f] shadow-lg backdrop-blur-sm w-full">
-          <ul className="flex flex-col gap-4 p-6 text-white font-medium">
-            <li>
-              <Link href="/home" onClick={() => setMobileMenuOpen(false)}>
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link href="/items" onClick={() => setMobileMenuOpen(false)}>
-                ITEMS
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/aboutSection"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contactPage"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                CONTACT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#items"
-                className="bg-lime-500 hover:bg-lime-600 text-black font-semibold px-6 py-2 rounded-full flex items-center gap-2 transition-transform hover:scale-105"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                SHOP NOW <span>»</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
     </nav>
   );
 };
