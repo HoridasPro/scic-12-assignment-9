@@ -40,5 +40,4 @@ User Authentication: Users can log in; the navbar button changes from LOGIN to A
 Navbar Scroll Effect: Hides on scroll down and shows on scroll up.
 Responsive Design: Works well on mobile, tablet, and desktop devices.
 Product Cards: Each product displays an image, name, price, stock, and description.
-Toast Notifications: Shows success message whenever a product is added.
 Route Management: Clean navigation with Next.js Link for routing.

@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     if (
-      email === "admin@freshfruits.com" &&
+      email === "programinghero1.com" &&
       password === "123456"
     ) {
       // store auth in cookie
