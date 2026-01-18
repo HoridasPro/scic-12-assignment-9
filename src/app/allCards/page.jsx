@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import FruitCard from "../FruitCard/FruitCard.jsx";
+import FruitCard from "../Components/FruitCard/FruitCard.jsx";
 
 export default function FruitsCards() {
   const [fruits, setFruits] = useState([]);

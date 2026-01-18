@@ -1,56 +1,112 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-const DetailsPage = ({ params }) => {
-  const { id } = params;
-  const [fruit, setFruit] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// const DetailsPage = ({ params }) => {
+//   const { id } = params;
+//   const [fruit, setFruit] = useState(null);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
 
-  // Fetch fruit data
-  useEffect(() => {
-    const fetchFruit = async () => {
-      try {
-        const res = await fetch(
-          `http://localhost:3000/api/fruitsCollection/${id}`,
-        );
-        if (!res.ok) throw new Error("Failed to fetch fruit");
-        const data = await res.json();
-        setFruit(data);
-      } catch (err) {
-        console.error(err);
-        setError("Fruit not found");
-      } finally {
-        setLoading(false);
-      }
-    };
+//   // Fetch fruit data
+//   useEffect(() => {
+//     const fetchFruit = async () => {
+//       try {
+//         const res = await fetch(
+//           `http://localhost:3000/api/fruitsCollection/${id}`,
+//         );
+//         if (!res.ok) throw new Error("Failed to fetch fruit");
+//         const data = await res.json();
+//         setFruit(data);
+//       } catch (err) {
+//         console.error(err);
+//         setError("Fruit not found");
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
 
-    fetchFruit();
-  }, [id]);
+//     fetchFruit();
+//   }, [id]);
 
-  if (loading) return <h1 className="p-10 text-gray-500">Loading...</h1>;
-  if (error || !fruit) return <h1 className="p-10 text-red-500">{error}</h1>;
+//   if (loading) return <h1 className="p-10 text-gray-500">Loading...</h1>;
+//   if (error || !fruit) return <h1 className="p-10 text-red-500">{error}</h1>;
+
+//   return (
+//     <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg mt-10">
+//       <img
+//         src={fruit.realImage}
+//         alt={fruit.name}
+//         className="w-full h-64 object-cover rounded-lg mb-6"
+//       />
+//       <h1 className="text-3xl font-bold text-green-700 mb-4">{fruit.name}</h1>
+//       {fruit.origin && (
+//         <p className="text-gray-600 mb-2">
+//           <strong>Origin:</strong> {fruit.origin}
+//         </p>
+//       )}
+//       <p className="text-gray-600 mb-2">
+//         <strong>Price:</strong> ৳{fruit.price}
+//       </p>
+//       <p className="text-gray-600 mb-6">{fruit.description}</p>
+//     </div>
+//   );
+// };
+
+// export default DetailsPage;
+
+const getFruit = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/fruitsCollection/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) return null;
+  return res.json();
+};
+
+const FruitDetailsPage = async ({ params }) => {
+  const { id } = await params; // ✅ MUST
+
+  const fruit = await getFruit(id);
+
+  if (!fruit) {
+    return (
+      <h1 className="p-10 text-center text-red-500 text-xl">Fruit not found</h1>
+    );
+  }
 
   return (
-    <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg mt-10">
-      <img
-        src={fruit.realImage}
-        alt={fruit.name}
-        className="w-full h-64 object-cover rounded-lg mb-6"
-      />
-      <h1 className="text-3xl font-bold text-green-700 mb-4">{fruit.name}</h1>
-      {fruit.origin && (
-        <p className="text-gray-600 mb-2">
-          <strong>Origin:</strong> {fruit.origin}
-        </p>
-      )}
-      <p className="text-gray-600 mb-2">
-        <strong>Price:</strong> ৳{fruit.price}
-      </p>
-      <p className="text-gray-600 mb-6">{fruit.description}</p>
+    <div className="max-w-4xl mx-auto mt-16 p-6">
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img
+          src={fruit.realImage}
+          alt={fruit.name}
+          className="w-full h-96 object-cover"
+        />
+
+        <div className="p-8">
+          <h1 className="text-4xl font-bold text-green-700 mb-4">
+            {fruit.name}
+          </h1>
+
+          <p className="text-gray-600 mb-2">
+            <strong>Origin:</strong> {fruit.origin || "Unknown"}
+          </p>
+
+          <p className="text-gray-600 mb-2">
+            <strong>Price:</strong> ৳{fruit.price}
+          </p>
+
+          <p className="text-gray-600 mb-2">
+            <strong>Stock:</strong>{" "}
+            {fruit.stock > 0 ? "Available" : "Out of Stock"}
+          </p>
+
+          <p className="text-gray-700 mt-4">{fruit.description}</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default DetailsPage;
+export default FruitDetailsPage;
