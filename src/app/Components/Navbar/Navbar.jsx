@@ -9,7 +9,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // Check login state on mount and when storage changes
   useEffect(() => {
     const checkLogin = () => {
       setIsLoggedIn(localStorage.getItem("isLoggedIn") === "true");
@@ -17,13 +16,11 @@ const Navbar = () => {
 
     checkLogin();
 
-    // Listen for changes in localStorage (for multiple tabs)
     window.addEventListener("storage", checkLogin);
 
     return () => window.removeEventListener("storage", checkLogin);
   }, []);
 
-  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;

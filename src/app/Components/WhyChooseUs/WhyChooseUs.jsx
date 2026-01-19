@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-// Mock API data inline (Express API বাদ দিয়ে same page-এ)
 const mockData = [
   {
     id: 1,
@@ -33,9 +32,7 @@ const mockData = [
 export default function WhyChooseUsPage() {
   const [features, setFeatures] = useState([]);
 
-  // Simulate fetching from API
   useEffect(() => {
-    // Mimic async API call
     const fetchFeatures = async () => {
       await new Promise((resolve) => setTimeout(resolve, 200)); // simulate delay
       setFeatures(mockData);
@@ -64,11 +61,10 @@ export default function WhyChooseUsPage() {
               key={item.id}
               className="p-6 border rounded-2xl shadow-md hover:shadow-lg transition bg-white"
             >
-              {/* Icon */}
               <div className="text-5xl mb-4">{item.icon}</div>
-              {/* Title */}
+
               <h3 className="text-xl font-semibold text-black">{item.title}</h3>
-              {/* Description */}
+
               <p className="text-gray-500 mt-2 text-sm">{item.description}</p>
             </div>
           ))}
