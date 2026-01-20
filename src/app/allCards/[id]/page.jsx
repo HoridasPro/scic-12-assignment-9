@@ -4,7 +4,7 @@ const getFruit = async (id) => {
   });
 
   if (!res.ok) return null;
-  return res.json();s
+  return res.json();
 };
 
 const FruitDetailsPage = async ({ params }) => {
@@ -17,7 +17,6 @@ const FruitDetailsPage = async ({ params }) => {
       <h1 className="p-10 text-center text-red-500 text-xl">Fruit not found</h1>
     );
   }
-
   return (
     <div className="max-w-4xl mx-auto mt-16 p-6">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">

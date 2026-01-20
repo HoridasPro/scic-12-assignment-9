@@ -7,6 +7,7 @@ const AboutSection = () => {
   return (
     <section className="py-16 md:py-24 bg-[#E9EBDE]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        
         {/* Image */}
         <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden shadow-lg">
           <Image

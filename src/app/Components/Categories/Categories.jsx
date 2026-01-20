@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 const Categories = () => {
-  /* ---------------- SERVICES ---------------- */
   const services = [
     {
       title: "Fresh Vegetable",
@@ -22,7 +21,6 @@ const Categories = () => {
     },
   ];
 
-  /* ---------------- CATEGORIES ---------------- */
   const categories = [
     { name: "Fruit Juice", count: "05", icon: "🥤" },
     { name: "Salads", count: "05", icon: "🥗" },
@@ -31,7 +29,6 @@ const Categories = () => {
     { name: "Meat & Fish", count: "01", icon: "🐟" },
   ];
 
-  /* ---------------- BLOG SLIDER ---------------- */
   const blogs = [
     {
       title: "Develop Your Health By Organic Eating",
@@ -68,7 +65,6 @@ const Categories = () => {
 
   return (
     <main className="min-h-screen font-sans">
-      {/* ================= CATEGORIES ================= */}
       <section className="py-20  bg-white text-center">
         <h2 className="text-4xl font-bold mb-12 text-green-600">
           What We re Offering
@@ -90,7 +86,6 @@ const Categories = () => {
         </div>
       </section>
 
-      {/* ================= BLOG SLIDER ================= */}
       <section className="bg-[#f7f9f2] py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-black">

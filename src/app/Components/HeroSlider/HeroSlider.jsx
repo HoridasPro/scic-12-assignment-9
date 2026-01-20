@@ -44,7 +44,7 @@ const HeroSlider = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-[80vh] md:h-[90vh] pt-[72px]"
+      className="relative w-full h-[80vh] md:h-[90vh] pt-[73px]"
     >
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}

@@ -18,8 +18,6 @@ export default function Home() {
       <WhyChooseUs></WhyChooseUs>
       <Services></Services>
       <TeasteProduct></TeasteProduct>
-      {/* <BlogSection></BlogSection> */}
-      
     </>
   );
 }
